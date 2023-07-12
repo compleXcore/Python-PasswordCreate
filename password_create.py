@@ -15,7 +15,7 @@ password_word3 = input("Eklenmesini istediğiniz üçüncü karakter veya sayıl
 
 def password_create(password_repeat, password_lenght, password_lower, password_upper, password_specialchar, password_word, password_word2, password_word3):
     file = open(password_word+password_word2+password_word3+"_.txt", "a")
-    file.write(password_lenght+"Uzunluğunda")
+    file.write(str(password_lenght)+" Uzunluğunda "+str(password_repeat)+" Adet Şifre oluşturdunuz\n")
     for i in range(password_repeat):
         newpassword=""
         password_word = str(password_word)+str(password_word2)+str(password_word3) if password_specialchar == 'H' else str(password_word)+str(password_word2)+str(password_word3)+"!#$%&?@_"
